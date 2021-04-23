@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 
 
     const MongoClient = require('mongodb').MongoClient;
-    const uri = process.env.MONGODB_URI || "mongodb+srv://joebaudo:Atlasborgo-01@cluster0.vwjb1.mongodb.net/ux-comp?retryWrites=true&w=majority";
+    const uri = process.env.MONGODB_URI;
     const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
     client.connect(err => {
         const db = client.db('ux-comp');
